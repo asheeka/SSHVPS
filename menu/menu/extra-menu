@@ -1,0 +1,55 @@
+#!/bin/bash
+# // Lunatic
+
+# // color
+grenbo="\e[92;1m"
+NC='\033[0m'
+clear
+echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
+echo -e "\033[1;93m│$NC\033[42m          MENU MANAGER                    $NC"
+echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
+echo -e "\033[1;93m┌──────────────────────────────────────────┐\033[0m"
+echo -e "\033[1;93m│  ${grenbo}1.${NC} \033[0;36mGanti Banner ssh${NC}"
+echo -e "\033[1;93m│  ${grenbo}2.${NC} \033[0;36mGanti Domain${NC}"
+echo -e "\033[1;93m│  ${grenbo}3.${NC} \033[0;36mCheck Bandwith${NC}"
+echo -e "\033[1;93m│  ${grenbo}4.${NC} \033[0;36mCreate Slowdns${NC}"
+echo -e "\033[1;93m│  ${grenbo}5.${NC} \033[0;36mClear Cache / Sampah${NC}"
+echo -e "\033[1;93m│  ${grenbo}6.${NC} \033[0;36mFixx Cert Domain SSL${NC}"
+echo -e "\033[1;93m│  ${grenbo}7.${NC} \033[0;36mCheck Info Port VPN${NC}"
+echo -e "\033[1;93m│  ${grenbo}8.${NC} \033[0;36mSpeedTest${NC}"
+echo -e "\033[1;93m│  ${grenbo}0.${NC} \033[0;36mBack To Menu${NC}"
+echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
+echo -e ""
+read -p "Select From Options [ 1 - 7 or 0 ] : " menu
+case $menu in
+1)  clear ;
+    nano /etc/kyt.txt
+    ;;
+2) clear ;
+    addhost
+    ;;
+3) clear ;
+    bw
+    ;;
+4) clear ;
+    sd
+    ;;
+5) clear ;
+    clearcache
+    ;;
+6) clear ;
+    fixcert
+;;
+7) clear ;
+    prot
+;;
+8) clear ;
+   speedtest
+;;
+0) clear ;
+    menu
+;;
+*)
+    menu
+    ;;
+esac
