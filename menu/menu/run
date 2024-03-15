@@ -178,11 +178,11 @@ else
 fi
 
 # STATUS SERVICE  SSH UDP 
-if [[ $UdpSSH == "running" ]]; then 
-   status_udp="${GREEN}[ON]$NC${hijau} │$NC"
-else
-   status_udp="${RED}[OFF]${NC} "
-fi
+#if [[ $UdpSSH == "running" ]]; then 
+#   status_udp="${GREEN}[ON]$NC${hijau} │$NC"
+#else
+#   status_udp="${RED}[OFF]${NC} "
+#fi
 
 # // Running Function 
 clear
@@ -213,6 +213,7 @@ echo -e " ${hijau}│ ${hijau}Service BadVPN 7200               $blue=$NC $statu
 echo -e " ${hijau}│ ${hijau}Service BadVPN 7300               $blue=$NC $status_udp3"
 echo -e " ${hijau}│ ${hijau}Service Dropbear                  $blue=$NC $status_beruangjatuh"
 echo -e " ${hijau}│ ${hijau}Service Haproxy                   $blue=$NC $status_haproxy"
+echo -e " ${hijau}│ ${hijau}Service Fail2ban                  $blue=$NC $status_fail2ban"
 echo -e " ${hijau}│ ${hijau}Service Crons                     $blue=$NC $status_cron"
 echo -e " ${hijau}│ ${hijau}Service Nginx Webserver           $blue=$NC $status_nginx"
 echo -e " ${hijau}│ ${hijau}Service Xray Vmess WS TLS         $blue=$NC $status_ss"
