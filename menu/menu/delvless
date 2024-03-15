@@ -53,5 +53,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
     echo ""
     fi
 
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
+echo -e "back to menu on 2 second"
+sleep 2
+menu      
