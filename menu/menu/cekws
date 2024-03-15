@@ -78,3 +78,6 @@ rm -rf /tmp/other.txt
 echo ""
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
+echo -e "back to menu on 6 second"
+sleep 6
+menu      
