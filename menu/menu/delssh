@@ -38,8 +38,11 @@ read -p "Ketik Usernamenya : " Pengguna
 
 if getent passwd $Pengguna > /dev/null 2>&1; then
         userdel $Pengguna > /dev/null 2>&1
-        echo -e "User $Pengguna Berhasil Di Hapus Sayang."
+        echo -e "User $Pengguna Berhasil Di Hapus."
 else
         echo -e "Failure: User $Pengguna Tidak Di Temukan."
 fi
 
+echo -e "back to menu on 2 second"
+sleep 2
+menu      
