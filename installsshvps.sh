@@ -323,7 +323,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <b>TUNNELING</b>
 <code>━━━━━━━━━━━━━━━━━━━━━━━━━</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+62xxxxxxxx"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+62895416464300"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -413,7 +413,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     IPVS=$(cat /etc/xray/ipvps)
     print_success "Core Xray 1.8.1 Latest Version"
     
-    # Settings UP Nginix Server
+    # Settings UP Nginx Server
     clear
     curl -s ipinfo.io/city >>/etc/xray/city
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >>/etc/xray/isp
@@ -687,10 +687,10 @@ print_success "Swap 1 G"
 function ins_Fail2ban(){
 clear
 print_install "Menginstall Fail2ban"
-#apt -y install fail2ban > /dev/null 2>&1
-#sudo systemctl enable --now fail2ban
-#/etc/init.d/fail2ban restart
-#/etc/init.d/fail2ban status
+sudo apt -y install fail2ban > /dev/null 2>&1
+sudo systemctl enable --now fail2ban
+/etc/init.d/fail2ban restart
+/etc/init.d/fail2ban status
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
