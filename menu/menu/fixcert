@@ -73,4 +73,4 @@ function pasang_ssl() {
 pasang_ssl
 notif_ssl
 echo ""
-menu
+m-system

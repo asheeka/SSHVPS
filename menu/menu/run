@@ -48,7 +48,7 @@ badvpn3=$(systemctl status udp-mini-3 | grep Active | awk '{print $3}' | cut -d 
 Iptables=$(systemctl status netfilter-persistent | grep active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g')
 RClocal=$(systemctl status rc-local | grep active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g')
 Autorebot=$(systemctl status rc-local | grep active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g')
-UdpSSH=$(systemctl status udp-custom | grep active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g')
+#UdpSSH=$(systemctl status udp-mini | grep active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g')
 
 openssh=$( systemctl status ssh | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $openssh == "running" ]]; then
@@ -199,7 +199,7 @@ echo -e " ${hijau}│$NC$NC\033[41m              Service Information           $
 echo -e " ${hijau}└────────────────────────────────────────────┘${NC}"
 echo -e " ${hijau}┌────────────────────────────────────────────┐${NC}"
 echo -e " ${hijau}│ ${hijau}Service SSH / TUN                 $blue=$NC $status_ssh"
-echo -e " ${hijau}│ ${hijau}Service SSH UDP                   $blue=$NC $status_udp"
+#echo -e " ${hijau}│ ${hijau}Service SSH UDP                   $blue=$NC $status_udp"
 echo -e " ${hijau}│ ${hijau}Service OpenVPN SSL               $blue=$NC $status_openvpn"
 echo -e " ${hijau}│ ${hijau}Service OpenVPN WS-SSL            $blue=$NC $status_openvpn"
 echo -e " ${hijau}│ ${hijau}Service OpenVPN UDP               $blue=$NC $status_openvpn"
@@ -236,8 +236,8 @@ echo -e " ${hijau}┌───────────────────�
 echo -e " ${hijau}│$NC$NC\033[41m             CONTACT SUPPORT / CS           $NC${hijau}│$NC"
 echo -e " ${hijau}└────────────────────────────────────────────┘${NC}"
 echo -e " ${hijau}┌────────────────────────────────────────────┐${NC}"
-echo -e " ${hijau}│$NC WHATSAPP            $blue= ${NC} 085294609585 ${NC}  "
+echo -e " ${hijau}│$NC WHATSAPP            $blue= ${NC} 0895416464300 ${NC}  "
 echo -e " ${hijau}└────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+m-system

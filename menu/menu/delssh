@@ -45,4 +45,4 @@ fi
 
 echo -e "back to menu on 2 second"
 sleep 2
-menu      
+m-sshws      

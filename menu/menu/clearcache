@@ -35,4 +35,4 @@ notif_clearcache
 echo ""
 echo -e " Back to menu in 2 sec "
 sleep 1
-menu
+m-system

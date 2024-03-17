@@ -74,5 +74,5 @@ echo -e ""
 echo -e "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 read -n 1 -s -r -p "Press any key to back"
-menu
+m-sshws
 fi

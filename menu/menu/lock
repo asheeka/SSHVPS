@@ -39,4 +39,4 @@ clear
   systemctl restart ws
   echo ""
 read -n 1 -s -r -p "Enter Back To Menu"
-menu
+m-sshws

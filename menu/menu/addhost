@@ -57,9 +57,9 @@ checking_sc() {
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     echo -e ""
     echo -e "            ${RED}PERMISSION DENIED !${NC}"
-    echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
+    echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mNot Activated${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
-    echo -e "             \033[0;33mContact Admin :${NC}"
+    echo -e "             \033[0;33mContact Admin : 0895416464300${NC}"
     echo -e " "
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit 0
@@ -76,7 +76,7 @@ red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 clear
 
 function pasang_domain() {
-    echo -e "Sebelum Ganti Domain Harap Pointing Dulu Ip Vps Kalian"
+    echo -e "Sebelum Ganti Domain Harap Pointing Dulu Ip VPS Kalian"
     green "Ganti Domain"
     sleep 1
     read -rp "Input ur domain : " -e pp
@@ -140,4 +140,4 @@ notif_addhost
 echo ""
 green "Back to menu in 2 sec ${NC}"
 sleep 2
-menu
+m-system

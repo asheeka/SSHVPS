@@ -39,4 +39,4 @@ clear
   echo -e "\033[0;33m───────────────────\033[0m"
   echo ""
 read -n 1 -s -r -p "Enter Back To Menu"
-menu
+m-sshws

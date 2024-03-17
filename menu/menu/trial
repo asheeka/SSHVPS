@@ -33,7 +33,7 @@ checking_sc() {
     echo -e "            ${RED}PERMISSION DENIED !${NC}"
     echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
-    echo -e "             \033[0;33mContact Admin :${NC}"
+    echo -e "             \033[0;33mContact Admin : 0895416464300 ${NC}"
     echo -e ""
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     exit 0
@@ -53,7 +53,7 @@ IP=$(curl -sS ipv4.icanhazip.com)
 Login=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 clear
 echo -e "\033[1;96m___________________________________________\033[0m"
-echo -e "Settings Tittle Triall          "
+echo -e "Settings Title Trial          "
 echo -e "\033[1;96m___________________________________________\033[0m"
 echo -e ""
 echo -e ""
@@ -161,7 +161,7 @@ proxy = 104.26.6.171 JBR konek
 
 ◇━━━━━AXIS CONFERENCE━━━━━◇
 GET / HTTP/1.1[crlf]Host: support.zoom.us[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf*2]BMOVE / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket [crlf*2]HTTP/1.1 200 OK[crlf*2]
-Proxy 1 = zoomcares.zoom.us:80
+Proxy 1 =zoomcares.zoom.us:80
         =gomarketplacefront-cf.zoom.us:80
         =support.zoom.us
         =partner.zoom.u
@@ -215,4 +215,4 @@ echo -e "\033[1;96m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Aktif Selama   : $pup menit"
 echo -e "\033[1;96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+m-sshws

@@ -4,9 +4,9 @@ RED="\033[31m"
 YELLOW="\033[33m"
 BLUE="\033[36m"
 FONT="\033[0m"
+GREENBG="\033[42;37m"
 NS=$( cat /etc/xray/dns )
 PUB=$( cat /etc/slowdns/server.pub )
-GREENBG="\033[42;37m"
 REDBG="\033[41;37m"
 OK="${Green}--->${FONT}"
 ERROR="${RED}[ERROR]${FONT}"
@@ -42,11 +42,8 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
-
 # Valid Script
 ipsaya=$(curl -sS ipv4.icanhazip.com)
-
-
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 data_ip="https://raw.githubusercontent.com/asheeka/SSHVPS/main/Register"
@@ -73,24 +70,23 @@ clear
 domain=$(cat /etc/xray/domain)
 clear
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-  echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-  echo -e " CREATE VLESS ACCOUNT           "
-  echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-  read -rp "User: " -e user
-  CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
-
-  if [[ ${CLIENT_EXISTS} == '1' ]]; then
-    clear
-  echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-  echo -e " CREATE VLESS ACCOUNT           "
-  echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-    echo ""
-    echo "A client with the specified name was already created, please choose another name."
-    echo ""
-    echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
-    read -n 1 -s -r -p "Press any key to back on menu"
-    menu
-  fi
+	echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+	echo -e " CREATE VLESS ACCOUNT           "
+	echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+	read -rp "User: " -e user
+	CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+	if [[ ${CLIENT_EXISTS} == '1' ]]; then
+		clear
+		echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+		echo -e " CREATE VLESS ACCOUNT           "
+		echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+		echo ""
+		echo "A client with the specified name was already created, please choose another name."
+		echo ""
+		echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+		read -n 1 -s -r -p "Press any key to back on menu"
+		m-vless
+	fi
 done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
@@ -247,4 +243,4 @@ echo -e "Berakhir Pada    : $expe" | tee -a /etc/user-create/user.log
 echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/user-create/user.log
 echo "" | tee -a /etc/user-create/user.log
 read -p "Enter Back To menu"
-menu
+m-vless

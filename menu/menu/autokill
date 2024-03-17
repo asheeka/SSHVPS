@@ -46,7 +46,7 @@ case $AutoKill in
                 echo -e "        AutoKill Every     : 1 Minutes"      
                 echo -e ""
                 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"                         read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-                menu                                
+                m-sshws                                
                 ;;
                 2)
                 echo -e ""
@@ -64,7 +64,7 @@ case $AutoKill in
                 echo -e ""
                 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
                 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-                menu
+                m-sshws 
                 ;;
                 3)
                 echo -e ""
@@ -81,8 +81,8 @@ case $AutoKill in
                 echo -e "        AutoKill Every     : 3 Minutes"
                 echo -e ""
                 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
-                read -n 1 -s -r -p "Press [ Enter ] to back on menu"menu
-                menu
+                read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+                m-sshws 
                 ;;
                 4)
                 clear
@@ -94,11 +94,11 @@ case $AutoKill in
                 echo -e ""
                 echo -e "\033[1;93m└──────────────────────────────────────────┘\033[0m"
                 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-                menu
+                m-sshws 
                 ;;
                 x)
                 clear
-                exit
+                menu
                 ;;
         esac
         
