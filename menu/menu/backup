@@ -83,3 +83,5 @@ Tanggal       : $date
 "
 echo "Silahkan copy Link dan restore di VPS baru"
 echo ""
+read -p "$( echo -e "Press ${YELLOW}[ ${NC}${YELLOW}Enter${NC} ${YELLOW}]${NC} For menu") "
+menu
