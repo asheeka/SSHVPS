@@ -34,7 +34,7 @@ sleep 2
 if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
     echo -e "${OK} Your Architecture Is Supported ( ${green}$( uname -m )${NC} )"
 else
-    echo -e "${EROR} Your Architecture Is Not Supported ( ${YELLOW}$( uname -m )${NC} )"
+    echo -e "${ERROR} Your Architecture Is Not Supported ( ${YELLOW}$( uname -m )${NC} )"
     exit 1
 fi
 
@@ -44,13 +44,13 @@ if [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//
 elif [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "debian" ]]; then
     echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
 else
-    echo -e "${EROR} Your OS Is Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    echo -e "${ERROR} Your OS Is Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
     exit 1
 fi
 
 # // IP Address Validating
 if [[ $IP == "" ]]; then
-    echo -e "${EROR} IP Address ( ${YELLOW}Not Detected${NC} )"
+    echo -e "${ERROR} IP Address ( ${YELLOW}Not Detected${NC} )"
 else
     echo -e "${OK} IP Address ( ${green}$IP${NC} )"
 fi
