@@ -7,8 +7,8 @@ clear
 echo ""
 echo ""
 echo ""
-#sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
-read -rp "Input Domain Name. Example ( vpsku ): " -e sub
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
+#read -rp "Input Sub Domain Name. Example ( vpsku ): " -e sub
 DOMAIN=onedata.my.id
 SUB_DOMAIN=${sub}.onedata.my.id
 CF_ID=foreverwelearn@gmail.com
