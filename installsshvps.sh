@@ -239,7 +239,7 @@ echo -e " ━━━━━━━━━━━━━━━━━━━━━━━�
 read -p " Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
-echo -e " \e[1;32mPlease Enter Your Subdomain $NC"
+echo -e " \e[1;32mPlease Enter Your Existing Domain $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
 read -p " Masukan Domain : " host1
@@ -255,7 +255,7 @@ wget ${REPO}files/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
-print_install "Random Subdomain/Domain is Used"
+print_install "Random Subdomain/Domain from sistem is Used"
 clear
     fi
 }
